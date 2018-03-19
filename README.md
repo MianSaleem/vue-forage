@@ -31,6 +31,8 @@ In your app/components:
 
 ```javascript
 // configure your local storage
+// dont forget to import localForage before setting the driver
+// import localForage from 'localforage';
 this.$vf.config({
     driver: localforage.LOCALSTORAGE,
     name: 'vue-forage-demo'
@@ -66,7 +68,24 @@ this.$vf.clear(); // delete everything
 
 * Please refer to localForage documentation for more info, you can view the localForage Docs here: https://localforage.github.io/localForage
 
-API will work same as localForage in your vue app with `this.$vf`, only the json has been added to update json `jsonItem` objects easily.
+
+```javascript
+this.$vf.createInstance({
+    storeName: 'user'
+}).then((store) => {
+    store.setItem('key', ['some', 'value']);
+    store.length().then((keys) => {
+        console.log(keys);
+    });
+    store.iterate((value, key, num) => {
+        return [key, value];
+    }).then((result) => {
+        console.log(result);
+    });
+});
+```
+
+**API will work same as localForage in your vue app with `this.$vf`, only the json has been added to update json `jsonItem` objects easily.**
 
 You can use . notation for json object, if you need to update the version in above app code then you can simple 
 ```
