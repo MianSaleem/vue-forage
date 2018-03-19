@@ -1,0 +1,16 @@
+{
+  "name": "vue-forage",
+  "version": "1.0.0",
+  "description": "A Vue plugin from localForage",
+  "main": "src/index.js",
+  "repository": "https://github.com/MianSaleem/vue-forage",
+  "author": "Mian Saleem",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "localforage": "^1.6.0",
+    "object-path": "^0.11.4"
+  }
+}
