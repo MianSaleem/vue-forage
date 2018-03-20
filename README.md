@@ -6,11 +6,11 @@ A [Vue.js](https://vuejs.org/) wrapper plugin for [localForage](https://github.c
 
 Simply install the [npm package `vue-forage`](https://www.npmjs.com/package/vue-forage):
 
-```
+```javascript
 npm i vue-forage -S
 ```
 If you prefer yarn
-```
+```javascript
 yarn add vue-forage
 ```
 
@@ -71,7 +71,7 @@ this.$vf.clear(); // delete everything
 
 ```javascript
 this.$vf.createInstance({
-    storeName: 'user'
+    name: 'user'
 }).then((store) => {
     store.setItem('key', ['some', 'value']);
     store.length().then((keys) => {
@@ -88,11 +88,11 @@ this.$vf.createInstance({
 **API will work same as localForage in your vue app with `this.$vf`, only the json has been added to update json `jsonItem` objects easily.**
 
 You can use . notation for json object, if you need to update the version in above app code then you can simple 
-```
+```javascript
 this.$vf.json('app.version', '1.0.1');
 ``` 
 and to update author name
-```
+```javascript
 this.$vf.json('app.author.name', 'Mian Saleem');
 ```
 

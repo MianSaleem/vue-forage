@@ -82,7 +82,7 @@ const vf = {
                         });
                     });
                 },
-                setDriver(drivreName) {
+                setDriver (drivreName) {
                     return new Promise((resolve, reject) => {
                         resolve(localForage.setDriver(drivreName));
                     });
@@ -97,7 +97,7 @@ const vf = {
                         resolve(localForage.createInstance(options));
                     });
                 },
-                jsonItem(prop, value) {
+                jsonItem (prop, value) {
                     return new Promise((resolve, reject) => {
                         prop = prop.split(".");
                         let object = prop.shift();
@@ -111,7 +111,7 @@ const vf = {
                         });
                     });
                 },
-                json(prop, value) {
+                json (prop, value) {
                     return new Promise((resolve, reject) => {
                         setTimeout(() => { resolve(this.jsonItem(prop, value)); }, 0);
                     });
