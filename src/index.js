@@ -58,7 +58,7 @@ const vf = {
                 iterate () {
                     return new Promise((resolve, reject) => {
                         localForage.iterate((value, key, iterationNumber) => {
-                            resolve([value, key, iterationNumber])
+                            resolve([value, key, iterationNumber]);
                         })
                         .then(result => { resolve(result); })
                         .catch(err => { reject(err); });
