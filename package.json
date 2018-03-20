@@ -1,15 +1,12 @@
 {
   "name": "vue-forage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Vue plugin for localForage",
   "main": "src/index.js",
   "repository": "https://github.com/MianSaleem/vue-forage",
   "author": "Mian Saleem",
   "license": "MIT",
   "keywords": ["vuejs", "localForage", "IndexDB", "WebSQL", "localStorage"],
-  "scripts": {
-    "test": "jest"
-  },
   "dependencies": {
     "localforage": "^1.6.0",
     "object-path": "^0.11.4"
