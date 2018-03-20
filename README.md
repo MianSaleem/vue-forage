@@ -6,7 +6,7 @@ A [Vue.js](https://vuejs.org/) wrapper plugin for [localForage](https://github.c
 
 Simply install the [npm package `vue-forage`](https://www.npmjs.com/package/vue-forage):
 
-```javascript
+```
 // npm
 npm i vue-forage -S
 
@@ -76,7 +76,7 @@ this.$vf.clear(); // delete everything
 2. WebSQL `localforage.WEBSQL`
 3. localStorage `localforage.LOCALSTORAGE`
 
-If you would like to force usage of a particular driver you can import/require localForage as `import localForage from 'localforage';` or `const localForage = require('localforage');` then use `this.$vf.config({driver: localforage.LOCALSTORAGE});` or `this.$vf.setDriver(localforage.LOCALSTORAGE);` with one or more of the following parameters.
+If you would like to force usage of a particular driver you can import/require localForage as `import localForage from 'localforage';` or `const localForage = require('localforage');` then use `this.$vf.config({driver: localforage.LOCALSTORAGE});` or `this.$vf.setDriver(localforage.LOCALSTORAGE);`
 
 Available options: `localforage.INDEXEDDB`, `localforage.WEBSQL`, `localforage.LOCALSTORAGE`
 
