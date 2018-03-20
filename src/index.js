@@ -87,7 +87,7 @@ const vf = {
                         .then(data => {
                             objectPath.set(data, prop, value);
                             localForage.setItem(object, data)
-                            .then(() => { resolve(); })
+                            .then(value => { resolve(value); })
                             .catch(err => { reject(err); });
                         });
                     });
