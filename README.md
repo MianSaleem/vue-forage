@@ -62,11 +62,13 @@ this.$vf.removeItem('app');
 
 this.$vf.clear(); // delete everything
 
-// Forage will stringify/parse the json object automatically. 
+// Forage will stringify/parse the json object automatically.
 ```
 ---
+All the methods will return promise. Use `.then()` and `.catch()` whereever you need.
 
 * Please refer to localForage documentation for more info, you can view the localForage Docs at https://localforage.github.io/localForage
+---
 
 ### Default Driver
 
@@ -98,10 +100,10 @@ this.$vf.createInstance({
 
 **API will work same as localForage in your vue app with `this.$vf`, only the json has been added to update json `jsonItem` objects easily.**
 
-You can use . notation for json object, if you need to update the version in above app code then you can simple 
+You can use . notation for json object, if you need to update the version in above app code then you can simple
 ```javascript
 this.$vf.json('app.version', '1.0.1');
-``` 
+```
 and to update author name
 ```javascript
 this.$vf.json('app.author.name', 'Mian Saleem');
