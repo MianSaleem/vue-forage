@@ -6,11 +6,12 @@ A [Vue.js](https://vuejs.org/) wrapper plugin for [localForage](https://github.c
 
 Simply install the [npm package `vue-forage`](https://www.npmjs.com/package/vue-forage):
 
+NPM
 ```
-// npm
 npm i vue-forage -S
-
-// yarn
+```
+YARN
+```
 yarn add vue-forage
 ```
 
@@ -108,7 +109,7 @@ and to update author name
 ```javascript
 this.$vf.json('app.author.name', 'Mian Saleem');
 ```
-
+json will resolve with main object, in above example code `.then(value => console.log(value))` will log the updated `app` object.
 
 ## Contributing
 
