@@ -7,11 +7,11 @@ A [Vue.js](https://vuejs.org/) wrapper plugin for [localForage](https://github.c
 Simply install the [npm package `vue-forage`](https://www.npmjs.com/package/vue-forage):
 
 NPM
-```
+```bash
 npm i vue-forage -S
 ```
 YARN
-```
+```bash
 yarn add vue-forage
 ```
 
