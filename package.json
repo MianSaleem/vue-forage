@@ -1,6 +1,6 @@
 {
   "name": "vue-forage",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "A Vue plugin for localForage",
   "main": "src/index.js",
   "repository": "https://github.com/MianSaleem/vue-forage",
