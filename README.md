@@ -32,23 +32,21 @@ In your app/components:
 
 ```javascript
 // configure your local storage
-// dont forget to import localForage before setting the driver
-// import localForage from 'localforage';
 this.$vf.config({
-    driver: localforage.LOCALSTORAGE,
-    name: 'vf'
+    name: 'vue-forage'
 });
 
 // change driver
-this.$vf.setDriver(localforage.LOCALSTORAGE);
+// this.$vf.useWebSQLDriver();
+// this.$vf.useIndexedDBDriver();
+this.$vf.useLocalStorageDriver();
+// this.$vf.setDriver(YOURDRIVER);
 
 // SET ITEM
 // this.$vf.setItem('key', 'value');
-
 this.$vf.setItem('app', 'Vue Forage');
 
 // or
-
 this.$vf.setItem('app', { app: 'Vue Forage', version: '1.0.0', author: { name: 'John Doe', email: 'john.doe@mail.com' }});
 
 // GET ITEM
@@ -79,9 +77,7 @@ All the methods will return promise. Use `.then()` and `.catch()` whereever you 
 2. WebSQL `localforage.WEBSQL`
 3. localStorage `localforage.LOCALSTORAGE`
 
-If you would like to force usage of a particular driver you can import/require localForage as `import localForage from 'localforage';` or `const localForage = require('localforage');` then use `this.$vf.config({driver: localforage.LOCALSTORAGE});` or `this.$vf.setDriver(localforage.LOCALSTORAGE);`
-
-Available options: `localforage.INDEXEDDB`, `localforage.WEBSQL`, `localforage.LOCALSTORAGE`
+If you would like to force usage of a particular driver you can `this.$vf.useLocalStorageDriver();` or `this.$vf.useIndexedDBDriver();` or `this.$vf.useWebSQLDriver();` or for custom drivers `this.$vf.setDriver(yourdriver);`
 
 ```javascript
 this.$vf.createInstance({
@@ -99,7 +95,7 @@ this.$vf.createInstance({
 });
 ```
 
-**API will work same as localForage in your vue app with `this.$vf`, only the json has been added to update json `jsonItem` objects easily.**
+**API will work same as localForage in your vue app with `this.$vf`, only the json has been added to update json objects easily.**
 
 You can use . notation for json object, if you need to update the version in above app code then you can simple
 ```javascript
@@ -113,5 +109,4 @@ json will resolve with main object, in above example code `.then(value => consol
 
 ## Contributing
 
-Any sort of contributions and feedback is much appreciated. Just
-leave an issue or pull-request!
+Any sort of contributions and feedback is much appreciated. Just leave an issue or pull-request!

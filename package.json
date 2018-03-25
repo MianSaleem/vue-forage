@@ -1,6 +1,6 @@
 {
   "name": "vue-forage",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Vue plugin for localForage",
   "main": "src/index.js",
   "repository": "https://github.com/MianSaleem/vue-forage",
@@ -9,7 +9,7 @@
   "keywords": [
     "vuejs",
     "localForage",
-    "IndexDB",
+    "IndexedDB",
     "WebSQL",
     "localStorage"
   ],

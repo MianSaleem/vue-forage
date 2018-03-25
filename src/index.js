@@ -4,7 +4,7 @@ var objectPath = require("object-path");
 const vf = {
     install (Vue, options) {
         window.$vf = Vue.prototype.$vf = new Vue({
-            name: 'vf',
+            name: 'vue-forage',
             methods: {
                 getItem (key) {
                     return new Promise((resolve, reject) => {
@@ -97,6 +97,21 @@ const vf = {
                         setTimeout(() => { resolve(this.jsonItem(prop, value)); }, 0);
                     });
                 },
+                useLocalStorageDriver() {
+                    return new Promise((resolve, reject) => {
+                        resolve(localForage.setDriver(localForage.LOCALSTORAGE));
+                    });
+                },
+                useIndexedDBDriver() {
+                    return new Promise((resolve, reject) => {
+                        resolve(localForage.setDriver(localForage.INDEXEDDB));
+                    });
+                },
+                useWebSQLDriver() {
+                    return new Promise((resolve, reject) => {
+                        resolve(localForage.setDriver(localForage.WEBSQL));
+                    });
+                }
             }
         })
     }
