@@ -8,7 +8,7 @@ Simply install the [npm package `vue-forage`](https://www.npmjs.com/package/vue-
 
 NPM
 ```bash
-npm i vue-forage -S
+npm i vue-forage
 ```
 YARN
 ```bash
